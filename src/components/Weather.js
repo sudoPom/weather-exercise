@@ -5,7 +5,7 @@ import Search from './Search';
 
 const { search }  = window.location;
 let city = new URLSearchParams(search).get('city')
-console.log(city)
+
 const Weather = () => {
   const [weather, updateWeather] = useState([]);
 
