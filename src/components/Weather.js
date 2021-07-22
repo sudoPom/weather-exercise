@@ -6,6 +6,7 @@ import Search from './Search';
 const { search }  = window.location;
 let city = new URLSearchParams(search).get('city')
 
+
 const Weather = () => {
   const [weather, updateWeather] = useState([]);
 
@@ -17,7 +18,7 @@ const Weather = () => {
     })
   }, [])
 
-  var getApiCall = cityName => `http://api.openweathermap.org/data/2.5/forecast/?q=${cityName}&cnt=5&APPID=${process.env.REACT_APP_WEATHER_API_KEY}`;
+  var getApiCall = cityName => `https://api.openweathermap.org/data/2.5/forecast/?q=${cityName}&cnt=5&APPID=${process.env.REACT_APP_WEATHER_API_KEY}`;
   var count = 1
   const weatherForecast = weather.map((day) => <li key = {count++}>{day}</li>);
 
